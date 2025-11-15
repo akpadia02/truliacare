@@ -40,8 +40,6 @@ function AuthForm({ mode, role, onAuthSuccess }) {
             }
         }
 
-        // Simple authentication (for demo purposes)
-        // In a real app, this would call an API
         const users = JSON.parse(localStorage.getItem('users') || '[]');
         
         if (isLogin) {
@@ -152,7 +150,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
                         </p>
                     </div>
 
-                    {/* Error Message */}
+                    {/* Error Msg */}
                     {error && (
                         <motion.div
                             initial={{ opacity: 0, y: -10 }}
@@ -224,7 +222,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
                                 />
                             </motion.div>
                         )}
-
+                    
                         <motion.button
                             type="submit"
                             variants={itemVariants}
