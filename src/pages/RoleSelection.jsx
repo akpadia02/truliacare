@@ -33,7 +33,7 @@ function RoleSelection() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-green-50 to-indigo-100 flex items-center justify-center p-4">
             <motion.div
                 className="w-full max-w-4xl"
                 initial="hidden"
@@ -45,7 +45,7 @@ function RoleSelection() {
                     className="text-center mb-12"
                     variants={cardVariants}
                 >
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3B82F6] mb-4">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3bf66d] mb-4">
                         Maintenance Request System
                     </h1>
                     <p className="text-lg md:text-xl text-gray-700">
@@ -60,13 +60,13 @@ function RoleSelection() {
                         variants={cardVariants}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-white rounded-2xl shadow-xl p-8 cursor-pointer border-2 border-transparent hover:border-[#3B82F6] transition-all duration-300"
+                        className="bg-white rounded-2xl shadow-xl p-8 cursor-pointer border-2 border-transparent hover:border-[#3bf66d] transition-all duration-300"
                         onClick={() => handleRoleSelect('employee')}
                     >
                         <div className="text-center">
                             <div className="mb-6">
                                 <svg
-                                    className="w-24 h-24 mx-auto text-[#3B82F6]"
+                                    className="w-24 h-24 mx-auto text-[#3bf66d]"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -85,7 +85,7 @@ function RoleSelection() {
                             <p className="text-gray-600 mb-6">
                                 Submit maintenance requests and track their status
                             </p>
-                            <button className="bg-[#3B82F6] text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full">
+                            <button className="bg-[#3bf66d] text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full">
                                 Continue as Employee
                             </button>
                         </div>
@@ -96,13 +96,13 @@ function RoleSelection() {
                         variants={cardVariants}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-white rounded-2xl shadow-xl p-8 cursor-pointer border-2 border-transparent hover:border-[#3B82F6] transition-all duration-300"
+                        className="bg-white rounded-2xl shadow-xl p-8 cursor-pointer border-2 border-transparent hover:border-[#3bf66d] transition-all duration-300"
                         onClick={() => handleRoleSelect('admin')}
                     >
                         <div className="text-center">
                             <div className="mb-6">
                                 <svg
-                                    className="w-24 h-24 mx-auto text-[#3B82F6]"
+                                    className="w-24 h-24 mx-auto text-[#3bf66d]"
                                     fill="none"
                                     stroke="currentColor"
                                     viewBox="0 0 24 24"
@@ -121,7 +121,7 @@ function RoleSelection() {
                             <p className="text-gray-600 mb-6">
                                 Manage and escalate maintenance requests
                             </p>
-                            <button className="bg-[#3B82F6] text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full">
+                            <button className="bg-[#3bf66d] text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 w-full">
                                 Continue as Admin
                             </button>
                         </div>

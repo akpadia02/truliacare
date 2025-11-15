@@ -103,7 +103,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-green-50 to-indigo-100 flex items-center justify-center p-4">
             <motion.div
                 className="w-full max-w-md"
                 initial="hidden"
@@ -118,7 +118,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
                     <div className="text-center mb-8">
                         <div className="mb-4">
                             <svg
-                                className={`w-16 h-16 mx-auto ${role === 'employee' ? 'text-[#3B82F6]' : 'text-[#3B82F6]'}`}
+                                className={`w-16 h-16 mx-auto ${role === 'employee' ? 'text-[#3bf66d]' : 'text-[#3bf66d]'}`}
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -140,7 +140,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
                                 )}
                             </svg>
                         </div>
-                        <h1 className="text-3xl font-bold text-[#3B82F6] mb-2">
+                        <h1 className="text-3xl font-bold text-[#3bf66d] mb-2">
                             {isLogin ? `Login as ${roleTitle}` : `Sign Up as ${roleTitle}`}
                         </h1>
                         <p className="text-gray-600">
@@ -187,7 +187,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
                                 type="email"
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3B82F6] focus:border-transparent outline-none transition"
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#3bf66d] focus:border-transparent outline-none transition"
                                 placeholder="john.doe@example.com"
                                 required
                             />
@@ -228,7 +228,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
                             variants={itemVariants}
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="w-full bg-[#3B82F6] text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                            className="w-full bg-[#3bf66d] text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                         >
                             {isLogin ? "Login" : "Sign Up"}
                         </motion.button>
@@ -242,7 +242,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
                                     Don't have an account?{" "}
                                     <button
                                         onClick={() => navigate(role === 'employee' ? '/employee/signup' : '/admin/signup')}
-                                        className="text-[#3B82F6] hover:text-blue-600 font-semibold transition-colors"
+                                        className="text-[#3bf66d] hover:text-green-600 font-semibold transition-colors"
                                     >
                                         Sign Up
                                     </button>
@@ -252,7 +252,7 @@ function AuthForm({ mode, role, onAuthSuccess }) {
                                     Already have an account?{" "}
                                     <button
                                         onClick={() => navigate(role === 'employee' ? '/employee/login' : '/admin/login')}
-                                        className="text-[#3B82F6] hover:text-blue-600 font-semibold transition-colors"
+                                        className="text-[#3bf66d] hover:text-green-600 font-semibold transition-colors"
                                     >
                                         Login
                                     </button>
