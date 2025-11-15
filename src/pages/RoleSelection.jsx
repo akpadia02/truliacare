@@ -6,13 +6,11 @@ function RoleSelection() {
     const navigate = useNavigate();
 
     const handleRoleSelect = (role) => {
-        // Store role in localStorage for now (we'll use this later)
-        localStorage.setItem('userRole', role);
-        // Navigate to appropriate page based on role
+        // Navigate to login page based on role
         if (role === 'employee') {
-            navigate('/employee/dashboard');
+            navigate('/employee/login');
         } else if (role === 'admin') {
-            navigate('/admin/dashboard');
+            navigate('/admin/login');
         }
     };
 

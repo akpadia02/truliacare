@@ -4,6 +4,19 @@ import { useNavigate } from "react-router-dom";
 
 function AdminDashboard() {
     const navigate = useNavigate();
+    
+    // Check authentication
+    useEffect(() => {
+        const currentUser = localStorage.getItem('currentUser');
+        if (!currentUser) {
+            navigate('/admin/login');
+            return;
+        }
+        const user = JSON.parse(currentUser);
+        if (user.role !== 'admin') {
+            navigate('/admin/login');
+        }
+    }, [navigate]);
     const [requests, setRequests] = useState([]);
     const [filterStatus, setFilterStatus] = useState("All");
     const [selectedRequest, setSelectedRequest] = useState(null);
@@ -265,15 +278,20 @@ function AdminDashboard() {
                                 Manage and monitor all maintenance requests
                             </p>
                         </div>
-                        <button
-                            onClick={() => navigate('/')}
-                            className="flex items-center gap-2 text-gray-600 hover:text-[#3B82F6] transition-colors"
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                            </svg>
-                            Back
-                        </button>
+                        <div className="flex items-center gap-3">
+                            <button
+                                onClick={() => {
+                                    localStorage.removeItem('currentUser');
+                                    navigate('/admin/login');
+                                }}
+                                className="flex items-center gap-2 text-gray-600 hover:text-red-600 transition-colors"
+                            >
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                </svg>
+                                Logout
+                            </button>
+                        </div>
                     </div>
                 </motion.div>
 
